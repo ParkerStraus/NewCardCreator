@@ -65,18 +65,22 @@ namespace CardCreator
             sTitle = titleText.Text;
             sDescription = descText.Text;
             sQuantity = (int) quantity.Value;
-            byte[] sImageBytes = null;
-            if (sImagePath != null) sImageBytes = ImageToBytes(sImagePath);
-            Card newCard = new Card(sTitle,sDescription,sImageBytes);
+            Card newCard = new Card(sTitle, sDescription, null);
+            if (sImagePath != null) newCard.image = Image.FromFile(sImagePath);
 
-            FileEncoder.WriteToBinaryFile<Card>(deckpath+"\\" + sTitle + ".card", newCard);
-
-        }
-
-        private byte[] ImageToBytes(string imagepath)
-        {
-            ImageConverter imageConverter = new ImageConverter();
-            return (byte[])imageConverter.ConvertTo((Bitmap)Image.FromFile(imagepath), typeof(byte[]));
+            if (sQuantity == 1)
+            {
+                FileEncoder.WriteToBinaryFile<Card>(deckpath + "\\" + sTitle + ".card", newCard);
+                MessageBox.Show($"{sTitle} card has been added to the deck");
+            }
+            else if (sQuantity > 1)
+            {
+                for (int i = 0; i < sQuantity; i++)
+                {
+                    FileEncoder.WriteToBinaryFile<Card>(deckpath + "\\" + sTitle + "(" + i + ").card", newCard);
+                }
+                MessageBox.Show($"{sQuantity} {sTitle} cards have been added to the deck");
+            }
             
         }
 

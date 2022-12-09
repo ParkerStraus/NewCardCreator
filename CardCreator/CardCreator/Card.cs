@@ -13,27 +13,12 @@ namespace CardCreator
     {
         public string name { get; set; }
         public string description { get; set; }
-        byte[] image;
-        public Card( string name, string description, byte[] image)
+        public Image image;
+        public Card( string name, string description, Image image)
         {
             this.name = name;
             this.description = description;
             this.image = image;
-        }
-
-        public System.Drawing.Bitmap GetImageFromBytes()
-        {
-            if(image != null)
-            {
-
-                Bitmap bmp;
-                using (var ms = new MemoryStream(image))
-                {
-                    bmp = new Bitmap(ms);
-                }
-                return bmp;
-            }
-            else return null;
         }
     }
 }

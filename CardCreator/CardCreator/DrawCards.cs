@@ -32,12 +32,12 @@ namespace CardCreator
             CardList.Rows.Clear();
             foreach (Card card in deckCards)
             {
-                CardList.Rows.Add(card.name, card.description, card.GetImageFromBytes());
+                CardList.Rows.Add(card.name, card.description, card.image);
             }
             handView.Rows.Clear();
             foreach (Card card in handCards)
             {
-                handView.Rows.Add(card.name, card.description, card.GetImageFromBytes());
+                handView.Rows.Add(card.name, card.description, card.image);
             }
         }
 

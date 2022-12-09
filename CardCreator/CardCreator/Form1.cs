@@ -73,7 +73,7 @@ namespace CardCreator
                 {
 
                     Card newCard = FileEncoder.ReadFromBinaryFile<Card>(file);
-                    Image image = newCard.GetImageFromBytes();
+                    Image image = newCard.image;
                     CardList.Rows.Add(newCard.name, newCard.description, image);
                     cards.Add(newCard);
                 }
