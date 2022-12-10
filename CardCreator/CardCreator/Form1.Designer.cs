@@ -43,15 +43,17 @@
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.pathLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CardList)).BeginInit();
             this.SuspendLayout();
             // 
             // newcardbutton
             // 
-            this.newcardbutton.Location = new System.Drawing.Point(535, 349);
+            this.newcardbutton.Location = new System.Drawing.Point(401, 284);
+            this.newcardbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newcardbutton.Name = "newcardbutton";
-            this.newcardbutton.Size = new System.Drawing.Size(119, 23);
+            this.newcardbutton.Size = new System.Drawing.Size(116, 36);
             this.newcardbutton.TabIndex = 1;
             this.newcardbutton.Text = "Add new card(s)";
             this.newcardbutton.UseVisualStyleBackColor = true;
@@ -65,7 +67,8 @@
             this.deckToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,32 +80,32 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newCardsToolStripMenuItem
             // 
             this.newCardsToolStripMenuItem.Name = "newCardsToolStripMenuItem";
-            this.newCardsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newCardsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.newCardsToolStripMenuItem.Text = "New Deck";
             this.newCardsToolStripMenuItem.Click += new System.EventHandler(this.newDeck);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.loadToolStripMenuItem.Text = "Load Deck";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadDeck);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(134, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitProgram);
             // 
@@ -111,13 +114,13 @@
             this.deckToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.drawCardsToolStripMenuItem});
             this.deckToolStripMenuItem.Name = "deckToolStripMenuItem";
-            this.deckToolStripMenuItem.Size = new System.Drawing.Size(56, 26);
+            this.deckToolStripMenuItem.Size = new System.Drawing.Size(48, 21);
             this.deckToolStripMenuItem.Text = "Deck";
             // 
             // drawCardsToolStripMenuItem
             // 
             this.drawCardsToolStripMenuItem.Name = "drawCardsToolStripMenuItem";
-            this.drawCardsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.drawCardsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.drawCardsToolStripMenuItem.Text = "Draw Cards";
             this.drawCardsToolStripMenuItem.Click += new System.EventHandler(this.drawCardMenu);
             // 
@@ -128,11 +131,12 @@
             this.title,
             this.description,
             this.image});
-            this.CardList.Location = new System.Drawing.Point(172, 99);
+            this.CardList.Location = new System.Drawing.Point(106, 80);
+            this.CardList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CardList.Name = "CardList";
             this.CardList.RowHeadersWidth = 51;
             this.CardList.RowTemplate.Height = 24;
-            this.CardList.Size = new System.Drawing.Size(482, 217);
+            this.CardList.Size = new System.Drawing.Size(411, 200);
             this.CardList.TabIndex = 4;
             // 
             // title
@@ -159,22 +163,34 @@
             // pathLabel
             // 
             this.pathLabel.AutoSize = true;
-            this.pathLabel.Location = new System.Drawing.Point(169, 69);
+            this.pathLabel.Location = new System.Drawing.Point(119, 37);
+            this.pathLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pathLabel.Name = "pathLabel";
-            this.pathLabel.Size = new System.Drawing.Size(79, 16);
+            this.pathLabel.Size = new System.Drawing.Size(66, 13);
             this.pathLabel.TabIndex = 5;
             this.pathLabel.Text = "Current Path";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(119, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Deck Preview";
+            // 
             // DeckViewMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pathLabel);
             this.Controls.Add(this.CardList);
             this.Controls.Add(this.newcardbutton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeckViewMenu";
             this.Text = "Card Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -202,6 +218,7 @@
         private System.Windows.Forms.ToolStripMenuItem deckToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drawCardsToolStripMenuItem;
         private System.Windows.Forms.Label pathLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

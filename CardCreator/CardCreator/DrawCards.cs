@@ -78,7 +78,7 @@ namespace CardCreator
             }
             catch (Exception exception)
             {
-
+                MessageBox.Show("No cards are in your hand to play.\n");
             }
         }
 

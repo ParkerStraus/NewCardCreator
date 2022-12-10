@@ -40,15 +40,18 @@
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.shuffle = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.handView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardList)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(421, 347);
+            this.button3.Location = new System.Drawing.Point(316, 282);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 23);
+            this.button3.Size = new System.Drawing.Size(116, 58);
             this.button3.TabIndex = 14;
             this.button3.Text = "Draw Card";
             this.button3.UseVisualStyleBackColor = true;
@@ -56,9 +59,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(666, 347);
+            this.button2.Location = new System.Drawing.Point(457, 282);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 23);
+            this.button2.Size = new System.Drawing.Size(135, 58);
             this.button2.TabIndex = 13;
             this.button2.Text = "Play Card";
             this.button2.UseVisualStyleBackColor = true;
@@ -66,9 +70,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 347);
+            this.button1.Location = new System.Drawing.Point(9, 282);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 23);
+            this.button1.Size = new System.Drawing.Size(129, 58);
             this.button1.TabIndex = 12;
             this.button1.Text = "Exit to Menu";
             this.button1.UseVisualStyleBackColor = true;
@@ -81,11 +86,12 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewImageColumn1});
-            this.handView.Location = new System.Drawing.Point(421, 80);
+            this.handView.Location = new System.Drawing.Point(303, 65);
+            this.handView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.handView.Name = "handView";
             this.handView.RowHeadersWidth = 51;
             this.handView.RowTemplate.Height = 24;
-            this.handView.Size = new System.Drawing.Size(367, 217);
+            this.handView.Size = new System.Drawing.Size(288, 176);
             this.handView.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1
@@ -116,11 +122,12 @@
             this.title,
             this.description,
             this.image});
-            this.CardList.Location = new System.Drawing.Point(12, 80);
+            this.CardList.Location = new System.Drawing.Point(9, 65);
+            this.CardList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CardList.Name = "CardList";
             this.CardList.RowHeadersWidth = 51;
             this.CardList.RowTemplate.Height = 24;
-            this.CardList.Size = new System.Drawing.Size(352, 217);
+            this.CardList.Size = new System.Drawing.Size(277, 176);
             this.CardList.TabIndex = 10;
             // 
             // title
@@ -146,31 +153,56 @@
             // 
             // shuffle
             // 
-            this.shuffle.Location = new System.Drawing.Point(242, 347);
+            this.shuffle.Location = new System.Drawing.Point(158, 282);
+            this.shuffle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.shuffle.Name = "shuffle";
-            this.shuffle.Size = new System.Drawing.Size(122, 23);
+            this.shuffle.Size = new System.Drawing.Size(115, 58);
             this.shuffle.TabIndex = 15;
             this.shuffle.Text = "Reshuffle Cards";
             this.shuffle.UseVisualStyleBackColor = true;
             this.shuffle.Click += new System.EventHandler(this.shuffleCards);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.Location = new System.Drawing.Point(123, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 24);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Deck";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.Location = new System.Drawing.Point(408, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 24);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "In Hand";
+            // 
             // DrawCards
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.shuffle);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.handView);
             this.Controls.Add(this.CardList);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DrawCards";
             this.Text = "DrawCards";
             this.Load += new System.EventHandler(this.DrawCards_Load);
             ((System.ComponentModel.ISupportInitialize)(this.handView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardList)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -188,5 +220,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewImageColumn image;
         private System.Windows.Forms.Button shuffle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
