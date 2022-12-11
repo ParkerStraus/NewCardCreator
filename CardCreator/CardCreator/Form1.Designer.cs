@@ -37,6 +37,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawCardsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.CardList = new System.Windows.Forms.DataGridView();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,8 +46,6 @@
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.pathLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CardList)).BeginInit();
@@ -72,7 +72,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(600, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,32 +84,32 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newCardsToolStripMenuItem
             // 
             this.newCardsToolStripMenuItem.Name = "newCardsToolStripMenuItem";
-            this.newCardsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.newCardsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.newCardsToolStripMenuItem.Text = "New Deck";
             this.newCardsToolStripMenuItem.Click += new System.EventHandler(this.newDeck);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.loadToolStripMenuItem.Text = "Load Deck";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadDeck);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(134, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(126, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitProgram);
             // 
@@ -118,18 +118,34 @@
             this.deckToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.drawCardsToolStripMenuItem});
             this.deckToolStripMenuItem.Name = "deckToolStripMenuItem";
-            this.deckToolStripMenuItem.Size = new System.Drawing.Size(48, 21);
+            this.deckToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.deckToolStripMenuItem.Text = "Deck";
             // 
             // drawCardsToolStripMenuItem
             // 
             this.drawCardsToolStripMenuItem.Name = "drawCardsToolStripMenuItem";
-            this.drawCardsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.drawCardsToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.drawCardsToolStripMenuItem.Text = "Draw Cards";
             this.drawCardsToolStripMenuItem.Click += new System.EventHandler(this.drawCardMenu);
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // CardList
             // 
+            this.CardList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.CardList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CardList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
@@ -140,8 +156,9 @@
             this.CardList.Name = "CardList";
             this.CardList.RowHeadersWidth = 51;
             this.CardList.RowTemplate.Height = 24;
-            this.CardList.Size = new System.Drawing.Size(430, 200);
+            this.CardList.Size = new System.Drawing.Size(430, 188);
             this.CardList.TabIndex = 4;
+            this.CardList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CardList_CellContentClick);
             // 
             // title
             // 
@@ -182,21 +199,6 @@
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Deck Preview";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // label2
             // 

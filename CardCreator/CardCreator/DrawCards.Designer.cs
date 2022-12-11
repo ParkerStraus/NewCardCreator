@@ -49,7 +49,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(316, 282);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 58);
             this.button3.TabIndex = 14;
@@ -60,7 +60,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(457, 282);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 58);
             this.button2.TabIndex = 13;
@@ -71,7 +71,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(9, 282);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 58);
             this.button1.TabIndex = 12;
@@ -87,12 +87,13 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewImageColumn1});
             this.handView.Location = new System.Drawing.Point(303, 65);
-            this.handView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.handView.Margin = new System.Windows.Forms.Padding(2);
             this.handView.Name = "handView";
             this.handView.RowHeadersWidth = 51;
             this.handView.RowTemplate.Height = 24;
             this.handView.Size = new System.Drawing.Size(288, 176);
             this.handView.TabIndex = 11;
+            this.handView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.handView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -123,12 +124,13 @@
             this.description,
             this.image});
             this.CardList.Location = new System.Drawing.Point(9, 65);
-            this.CardList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CardList.Margin = new System.Windows.Forms.Padding(2);
             this.CardList.Name = "CardList";
             this.CardList.RowHeadersWidth = 51;
             this.CardList.RowTemplate.Height = 24;
             this.CardList.Size = new System.Drawing.Size(277, 176);
             this.CardList.TabIndex = 10;
+            this.CardList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CardList_CellContentClick);
             // 
             // title
             // 
@@ -154,7 +156,7 @@
             // shuffle
             // 
             this.shuffle.Location = new System.Drawing.Point(158, 282);
-            this.shuffle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shuffle.Margin = new System.Windows.Forms.Padding(2);
             this.shuffle.Name = "shuffle";
             this.shuffle.Size = new System.Drawing.Size(115, 58);
             this.shuffle.TabIndex = 15;
@@ -195,7 +197,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.handView);
             this.Controls.Add(this.CardList);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DrawCards";
             this.Text = "DrawCards";
             this.Load += new System.EventHandler(this.DrawCards_Load);

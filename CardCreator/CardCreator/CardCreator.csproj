@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="CardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardView.Designer.cs">
+      <DependentUpon>CardView.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeckCreation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CardView.resx">
+      <DependentUpon>CardView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeckCreation.resx">
       <DependentUpon>DeckCreation.cs</DependentUpon>
     </EmbeddedResource>

@@ -88,5 +88,35 @@ namespace CardCreator
             form1.Show();
             this.Close();
         }
+
+        private void CardList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int i = CardList.CurrentCell.RowIndex;
+            DataGridViewRow row = CardList.Rows[i];
+            string title = Convert.ToString(row.Cells[0].Value);
+            string desc = Convert.ToString(row.Cells[1].Value);
+            Image image = (Image)row.Cells[2].Value;
+            CardView cv = new CardView();
+            cv.titl = title;
+            cv.description = desc;
+            cv.image = image;
+            cv.Show();
+        }
+
+        private void handView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int i = handView.CurrentCell.RowIndex;
+            DataGridViewRow row = handView.Rows[i];
+            string title = Convert.ToString(row.Cells[0].Value);
+            string desc = Convert.ToString(row.Cells[1].Value);
+            Image image = (Image)row.Cells[2].Value;
+            CardView cv = new CardView();
+            cv.titl = title;
+            cv.description = desc;
+            cv.image = image;
+            cv.Show();
+        }
     }
 }

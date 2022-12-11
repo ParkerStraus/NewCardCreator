@@ -136,5 +136,19 @@ namespace CardCreator
                 "7: To replace the cards into your deck, click the 'Reshuffle' button.\n\n" +
                 "That's basically all there is to it! Have fun!");
         }
+
+        private void CardList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = CardList.CurrentCell.RowIndex;
+            DataGridViewRow row = CardList.Rows[i];
+            string title = Convert.ToString(row.Cells[0].Value);
+            string desc = Convert.ToString(row.Cells[1].Value);
+            Image image = (Image)row.Cells[2].Value;
+            CardView cv = new CardView();
+            cv.titl = title;
+            cv.description = desc;
+            cv.image = image;
+            cv.Show();
+        }
     }
 }
