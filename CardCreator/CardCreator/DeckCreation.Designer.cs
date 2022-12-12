@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckCreation));
             this.label1 = new System.Windows.Forms.Label();
             this.deckNameBox = new System.Windows.Forms.TextBox();
             this.submit = new System.Windows.Forms.Button();
@@ -37,24 +38,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 66);
+            this.label1.Location = new System.Drawing.Point(65, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 16);
+            this.label1.Size = new System.Drawing.Size(166, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please type the name of the deck";
             // 
             // deckNameBox
             // 
-            this.deckNameBox.Location = new System.Drawing.Point(90, 99);
+            this.deckNameBox.Location = new System.Drawing.Point(68, 80);
+            this.deckNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deckNameBox.Name = "deckNameBox";
-            this.deckNameBox.Size = new System.Drawing.Size(281, 22);
+            this.deckNameBox.Size = new System.Drawing.Size(212, 20);
             this.deckNameBox.TabIndex = 1;
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(296, 158);
+            this.submit.Location = new System.Drawing.Point(222, 128);
+            this.submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(75, 23);
+            this.submit.Size = new System.Drawing.Size(56, 19);
             this.submit.TabIndex = 2;
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = true;
@@ -62,9 +66,10 @@
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(203, 158);
+            this.cancel.Location = new System.Drawing.Point(152, 128);
+            this.cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(75, 23);
+            this.cancel.Size = new System.Drawing.Size(56, 19);
             this.cancel.TabIndex = 3;
             this.cancel.Text = "Cancel";
             this.cancel.UseVisualStyleBackColor = true;
@@ -72,13 +77,15 @@
             // 
             // DeckCreation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 257);
+            this.ClientSize = new System.Drawing.Size(352, 209);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.deckNameBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeckCreation";
             this.Text = "DeckCreation";
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckViewMenu));
             this.newcardbutton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +73,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,32 +85,32 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newCardsToolStripMenuItem
             // 
             this.newCardsToolStripMenuItem.Name = "newCardsToolStripMenuItem";
-            this.newCardsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.newCardsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.newCardsToolStripMenuItem.Text = "New Deck";
             this.newCardsToolStripMenuItem.Click += new System.EventHandler(this.newDeck);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.loadToolStripMenuItem.Text = "Load Deck";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadDeck);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(126, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(134, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitProgram);
             // 
@@ -118,13 +119,13 @@
             this.deckToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.drawCardsToolStripMenuItem});
             this.deckToolStripMenuItem.Name = "deckToolStripMenuItem";
-            this.deckToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.deckToolStripMenuItem.Size = new System.Drawing.Size(48, 21);
             this.deckToolStripMenuItem.Text = "Deck";
             // 
             // drawCardsToolStripMenuItem
             // 
             this.drawCardsToolStripMenuItem.Name = "drawCardsToolStripMenuItem";
-            this.drawCardsToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.drawCardsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.drawCardsToolStripMenuItem.Text = "Draw Cards";
             this.drawCardsToolStripMenuItem.Click += new System.EventHandler(this.drawCardMenu);
             // 
@@ -133,13 +134,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -220,6 +221,7 @@
             this.Controls.Add(this.CardList);
             this.Controls.Add(this.newcardbutton);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeckViewMenu";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardView));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.desc = new System.Windows.Forms.Label();
@@ -69,6 +70,7 @@
             this.Controls.Add(this.desc);
             this.Controls.Add(this.title);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CardView";
             this.Text = "CardView";
             this.Load += new System.EventHandler(this.CardView_Load);
